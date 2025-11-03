@@ -24,6 +24,9 @@ const ITEMS = [
   { id: 'time-off', name: 'Take 1 Month Off Work', price: 6000, emoji: '🛌' },
   { id: 'private-jet', name: 'Fly in a Private Jet', price: 12000, emoji: '✈️' },
   { id: 'dino', name: 'Life-Size Animatronic T-Rex', price: 14000, emoji: '🦖', hyperlink: 'https://web.archive.org/web/20251103011140/https://www.mydinosaurs.com/product/giant-dinosaur-animatronic-t.rex-for-sale/' },
+  { id: '10years', name: '10 Years Off From Work', price: 670000, emoji: '🦥' },
+  { id: 'luxury', name: 'Luxury Villa in Bali', price: 800000, emoji: '🏝️' },
+  { id: 'home', name: 'Home in Australia', price: MEDIAN_HOUSE_PRICE, emoji: '🛖' },
 ].toSorted((a, b) => a.price - b.price);
 
 export default function HousingCrisisCalculator() {
