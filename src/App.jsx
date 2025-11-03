@@ -97,7 +97,7 @@ export default function HousingCrisisCalculator() {
         </div>
 
         {/* Budget Display */}
-        <div className="sticky top-0 bg-white rounded-2xl shadow-xl p-8 mb-8">
+        <div className="sticky top-0 bg-white rounded-2xl shadow-xl p-8 mb-8 z-10">
           <div className="flex justify-between items-center mb-4">
             <div>
               <h2 className="text-2xl font-bold text-gray-900 mb-2">Your Budget</h2>
