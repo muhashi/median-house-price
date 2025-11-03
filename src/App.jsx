@@ -108,21 +108,6 @@ export default function HousingCrisisCalculator() {
                 Spent: ${totalSpent.toLocaleString()} ({percentSpent.toFixed(1)}%)
               </p>
             </div>
-            <div className="flex gap-3">
-              <button
-                onClick={shareItems}
-                className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
-              >
-                {copied ? <Check size={20} /> : <Copy size={20} />}
-                {copied ? 'Copied!' : 'Share'}
-              </button>
-              <button
-                onClick={reset}
-                className="bg-gray-600 hover:bg-gray-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
-              >
-                Reset
-              </button>
-            </div>
           </div>
           
           {/* Progress Bar */}
@@ -131,6 +116,22 @@ export default function HousingCrisisCalculator() {
               className="bg-gradient-to-r from-green-500 to-red-500 h-4 transition-all duration-300"
               style={{ width: `${percentSpent}%` }}
             ></div>
+          </div>
+
+          <div className="flex mt-6 gap-4 justify-between">
+            <button
+              onClick={shareItems}
+              className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
+            >
+              {copied ? <Check size={20} /> : <Copy size={20} />}
+              {copied ? 'Copied!' : 'Share'}
+            </button>
+            <button
+              onClick={reset}
+              className="bg-gray-600 hover:bg-gray-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
+            >
+              Reset
+            </button>
           </div>
         </div>
 
@@ -215,7 +216,7 @@ export default function HousingCrisisCalculator() {
         {/* Footer */}
         <div className="text-center mt-12 text-gray-500 space-y-5 pb-6">
           <p className="text-sm">
-            This visualizes the median Australian house price of ${MEDIAN_HOUSE_PRICE.toLocaleString()} to highlight the housing affordability crisis facing Australians.            
+            This website puts the median Australian house price of ${MEDIAN_HOUSE_PRICE.toLocaleString()} into perspective to highlight the housing affordability crisis in Australia.            
           </p>
           <p className="text-sm">
             Created by <a href="https://muhashi.com" target="_blank" className="text-blue-600 group text-pink-500 transition-all duration-300 ease-in-out">
