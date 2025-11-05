@@ -68,7 +68,7 @@ export default function HousingCrisisCalculator() {
   const shareItems = () => {
     const purchasedItems = getPurchasedItems();
     if (purchasedItems.length === 0) {
-      navigator.clipboard.writeText('I could buy a house... or nothing 💩\n\nSee what you could buy instead: https://muhashi.com/median-house-australia/');
+      navigator.clipboard.writeText(`Instead of buying a $${MEDIAN_HOUSE_PRICE.toLocaleString()} house in Australia, I bought nothing 💩\n\nSee what you could buy instead: https://muhashi.com/median-house-australia/`);
     } else {
       const totalSpent = MEDIAN_HOUSE_PRICE - budget;
       const text = `Instead of buying a $${MEDIAN_HOUSE_PRICE.toLocaleString()} house in Australia, I bought:\n\n${purchasedItems.join('\n')}\n\nTotal spent: $${totalSpent.toLocaleString()}\n\nSee what you could buy instead: https://muhashi.com/median-house-australia/`;
@@ -87,7 +87,7 @@ export default function HousingCrisisCalculator() {
   const percentSpent = (totalSpent / MEDIAN_HOUSE_PRICE) * 100;
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-orange-50 via-red-50 to-pink-50">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-blue-50">
       <div className="max-w-7xl mx-auto px-4 py-12">
         {/* Header */}
         <div className="text-center mb-12">
@@ -116,7 +116,7 @@ export default function HousingCrisisCalculator() {
           {/* Progress Bar */}
           <div className="w-full bg-gray-200 rounded-full h-4 overflow-hidden">
             <div
-              className="bg-gradient-to-r from-green-500 to-red-500 h-4 transition-all duration-300"
+              className="bg-gradient-to-r from-green-500 to-green-500 h-4 transition-all duration-300"
               style={{ width: `${percentSpent}%` }}
             ></div>
           </div>
@@ -205,7 +205,7 @@ export default function HousingCrisisCalculator() {
                 if (count === 0) return null;
                 const item = ITEMS.find(i => i.id === id);
                 return (
-                  <div key={id} className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-lg p-3 border-2 border-purple-200">
+                  <div key={id} className="bg-gradient-to-br from-blue-50 to-blue-50 rounded-lg p-3 border-2 border-blue-200">
                     <div className="text-2xl mb-1">{item.emoji}</div>
                     <div className="text-sm font-semibold text-gray-900">{item.name}</div>
                     <div className="text-lg font-bold text-purple-600">x{count}</div>
@@ -219,11 +219,8 @@ export default function HousingCrisisCalculator() {
         {/* Footer */}
         <div className="text-center mt-12 text-gray-500 space-y-5 pb-6">
           <p className="text-sm">
-            This website puts the median Australian house price of ${MEDIAN_HOUSE_PRICE.toLocaleString()} into perspective to highlight the housing affordability crisis in Australia.            
-          </p>
-          <p className="text-sm">
-            Created by <a href="https://muhashi.com" target="_blank" className="text-blue-600 group text-pink-500 transition-all duration-300 ease-in-out">
-              <span className="bg-left-bottom bg-gradient-to-r from-pink-500 to-pink-500 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">muhashi</span>
+            Created by <a href="https://muhashi.com" target="_blank" className="text-blue-600 group text-blue-600 transition-all duration-300 ease-in-out">
+              <span className="bg-left-bottom bg-gradient-to-r from-blue-600 to-blue-600 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">muhashi</span>
             </a>.
           </p>
         </div>
