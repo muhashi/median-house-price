@@ -68,10 +68,10 @@ export default function HousingCrisisCalculator() {
   const shareItems = () => {
     const purchasedItems = getPurchasedItems();
     if (purchasedItems.length === 0) {
-      navigator.clipboard.writeText(`Instead of buying a $${MEDIAN_HOUSE_PRICE.toLocaleString()} house in Australia, I bought nothing 💩\n\nSee what you could buy instead: https://muhashi.com/median-house-australia/`);
+      navigator.clipboard.writeText(`Instead of buying a $${MEDIAN_HOUSE_PRICE.toLocaleString()} house in Australia, I bought nothing 💩\n\nSee what you could buy instead: https://housing.muhashi.com/`);
     } else {
       const totalSpent = MEDIAN_HOUSE_PRICE - budget;
-      const text = `Instead of buying a $${MEDIAN_HOUSE_PRICE.toLocaleString()} house in Australia, I bought:\n\n${purchasedItems.join('\n')}\n\nTotal spent: $${totalSpent.toLocaleString()}\n\nSee what you could buy instead: https://muhashi.com/median-house-australia/`;
+      const text = `Instead of buying a $${MEDIAN_HOUSE_PRICE.toLocaleString()} house in Australia, I bought:\n\n${purchasedItems.join('\n')}\n\nTotal spent: $${totalSpent.toLocaleString()}\n\nSee what you could buy instead: https://housing.muhashi.com/`;
       navigator.clipboard.writeText(text);
     }
     setCopied(true);
@@ -92,7 +92,7 @@ export default function HousingCrisisCalculator() {
         {/* Header */}
         <div className="text-center mb-12">
           <h1 className="text-3xl font-bold text-gray-700 mb-4">
-            The Median Australian House Costs <span className="font-bold text-red-600">${MEDIAN_HOUSE_PRICE.toLocaleString()}</span>
+            The Average Australian House Costs <span className="font-bold text-red-600">${MEDIAN_HOUSE_PRICE.toLocaleString()}</span>
           </h1>
           <p className="text-xl text-gray-600">
             What could you buy instead?
