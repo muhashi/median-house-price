@@ -222,13 +222,13 @@ export default function HousingCrisisCalculator() {
         )}
 
         {/* Footer */}
-        <div className="text-center mt-12 text-gray-500 space-y-5 pb-6 flex flex-row justify-center items-center gap-4">
+        <div className="text-center mt-12 text-gray-500 space-y-5 pb-6 flex flex-row justify-center items-center gap-4 flex-wrap">
           <p className="text-sm mx-0 my-auto">
-            Like my schtick? I wouldn't mind a coffee 🦛
+            Like my schtick? I wouldn't mind a coffee 🦛 (it only cost 0.0005% of a house)
           </p>
-            <a href='https://ko-fi.com/D1D5V1DSF' target='_blank'>
-              <img height='36' style={{border: 0, height: '36px'}} src='https://storage.ko-fi.com/cdn/kofi2.png?v=3' alt='Buy Me a Coffee at ko-fi.com' />
-            </a>
+          <a href='https://ko-fi.com/D1D5V1DSF' target='_blank'>
+            <img height='36' style={{border: 0, height: '36px'}} src='https://storage.ko-fi.com/cdn/kofi2.png?v=3' alt='Buy Me a Coffee at ko-fi.com' />
+          </a>
         </div>
       </div>
     </div>
