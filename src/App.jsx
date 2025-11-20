@@ -97,6 +97,11 @@ export default function HousingCrisisCalculator() {
           <p className="text-xl text-gray-600">
             What could you buy instead?
           </p>
+          <p className="text-sm text-gray-500 mt-2">
+            Created by <a href="https://muhashi.com" target="_blank" className="text-blue-600 group text-blue-600 transition-all duration-300 ease-in-out">
+              <span className="bg-left-bottom bg-gradient-to-r from-blue-600 to-blue-600 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">muhashi</span>
+            </a>.
+          </p>
         </div>
 
         {/* Budget Display */}
@@ -217,12 +222,13 @@ export default function HousingCrisisCalculator() {
         )}
 
         {/* Footer */}
-        <div className="text-center mt-12 text-gray-500 space-y-5 pb-6">
-          <p className="text-sm">
-            Created by <a href="https://muhashi.com" target="_blank" className="text-blue-600 group text-blue-600 transition-all duration-300 ease-in-out">
-              <span className="bg-left-bottom bg-gradient-to-r from-blue-600 to-blue-600 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">muhashi</span>
-            </a>.
+        <div className="text-center mt-12 text-gray-500 space-y-5 pb-6 flex flex-row justify-center items-center gap-4">
+          <p className="text-sm mx-0 my-auto">
+            Like my schtick? I wouldn't mind a coffee 🦛
           </p>
+            <a href='https://ko-fi.com/D1D5V1DSF' target='_blank'>
+              <img height='36' style={{border: 0, height: '36px'}} src='https://storage.ko-fi.com/cdn/kofi2.png?v=3' alt='Buy Me a Coffee at ko-fi.com' />
+            </a>
         </div>
       </div>
     </div>
